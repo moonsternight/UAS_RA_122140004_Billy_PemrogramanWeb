@@ -3,6 +3,8 @@
 1.1 Manipulasi DOM dengan JavaScript (15%)
 - **Form Input:** Form input yang dibuat mengandung minimal 4 elemen input yang berbeda seperti teks, checkbox, radio, dan lainnya. Hal ini memungkinkan pengguna untuk memasukkan data yang kemudian dapat diproses.
 - **Tampilan Data:** JavaScript digunakan untuk menampilkan data yang diterima dari server dalam tabel HTML. Ini termasuk mengambil data dari server dan menyisipkannya ke dalam elemen tabel di DOM.
+![image](https://github.com/user-attachments/assets/558d4234-8fbc-4256-8468-7f8c2a7b6639)
+
 
 1.2 Event Handling (15%)
 - **Penanganan Event:** Tiga jenis event atau lebih yang berbeda ditambahkan untuk menangani interaksi dengan form, termasuk click, submit, dan change.
