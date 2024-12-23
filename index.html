@@ -1,0 +1,141 @@
+<!--
+Nama  : Billy
+NIM   : 122140004
+Kelas : Pemrograman Web - RA (UAS)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Menetapkan charset untuk karakter encoding -->
+    <meta charset="UTF-8" />
+    <!-- Menetapkan viewport agar tampilan responsif di perangkat mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Menghubungkan stylesheet eksternal (style.css) untuk penataan halaman -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Menghubungkan font eksternal (Roboto) dari Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Judul halaman -->
+    <title>Student Information Form</title>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <!-- Form container untuk input data mahasiswa -->
+      <div class="form-container">
+        <form id="studentForm" novalidate>
+          <h2>Student Information Form</h2>
+
+          <!-- Input untuk nama mahasiswa -->
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="e.g., John Doe"
+          />
+          <!-- Tempat untuk menampilkan pesan error pada input nama -->
+          <small id="nameError" style="color: red"></small>
+
+          <!-- Input untuk email mahasiswa -->
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="e.g., john.doe@example.com"
+          />
+          <!-- Tempat untuk menampilkan pesan error pada input email -->
+          <small id="emailError" style="color: red"></small>
+
+          <!-- Input untuk usia mahasiswa -->
+          <label for="age">Age</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            required
+            placeholder="e.g., 25"
+            min="1"
+          />
+          <!-- Tempat untuk menampilkan pesan error pada input usia -->
+          <small id="ageError" style="color: red"></small>
+
+          <!-- Pilihan jenis kelamin mahasiswa -->
+          <label>Gender</label>
+          <div class="radio-container">
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+          </div>
+          <!-- Tempat untuk menampilkan pesan error pada input gender -->
+          <small id="genderError" style="color: red"></small>
+
+          <!-- Input untuk program akademik mahasiswa -->
+          <label for="academicProgram">Academic Program</label>
+          <input
+            type="text"
+            id="academicProgram"
+            name="academicProgram"
+            required
+            placeholder="e.g., Computer Science"
+          />
+          <!-- Tempat untuk menampilkan pesan error pada input program akademik -->
+          <small id="academicProgramError" style="color: red"></small>
+
+          <!-- Input untuk nama universitas mahasiswa -->
+          <label for="university">University</label>
+          <input
+            type="text"
+            id="university"
+            name="university"
+            required
+            placeholder="e.g., University of Example"
+          />
+          <!-- Tempat untuk menampilkan pesan error pada input universitas -->
+          <small id="universityError" style="color: red"></small>
+
+          <!-- Checkbox untuk setuju dengan syarat dan ketentuan -->
+          <label>
+            <input type="checkbox" id="terms" name="terms" />
+            I agree with the <span class="terms-text">terms of services</span>
+          </label>
+          <!-- Tempat untuk menampilkan pesan error pada checkbox syarat dan ketentuan -->
+          <small id="termsError" style="color: red"></small>
+
+          <!-- Tombol untuk mengirimkan form -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <!-- Tabel untuk menampilkan data mahasiswa -->
+      <div class="table-container">
+        <table id="studentTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Academic Program</th>
+              <th>University</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <!-- Data mahasiswa akan dimasukkan di sini -->
+        </table>
+      </div>
+    </div>
+
+    <!-- Menghubungkan script JavaScript eksternal -->
+    <script src="script.js"></script>
+  </body>
+</html>

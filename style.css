@@ -1,0 +1,457 @@
+/*
+Nama  : Billy
+NIM   : 122140004
+Kelas : Pemrograman Web - RA (UAS)
+*/
+
+body {
+  font-family: "Roboto", sans-serif; /* Menetapkan font dasar untuk seluruh halaman */
+  display: flex; /* Menggunakan Flexbox untuk tata letak */
+  justify-content: center; /* Menyusun konten secara horizontal di tengah */
+  align-items: center; /* Menyusun konten secara vertikal di tengah */
+  min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+  background: linear-gradient(
+    to top,
+    #102a43,
+    #1a1a2e,
+    #0f0f1e
+  ); /* Menambahkan latar belakang dengan gradasi warna */
+  margin: 0; /* Menghilangkan margin default */
+  padding: 30px; /* Menambahkan padding untuk menghindari konten terlalu dekat dengan tepi */
+  box-sizing: border-box; /* Memastikan padding tidak menambah ukuran total elemen */
+}
+
+.form-container {
+  background-color: rgba(
+    16,
+    42,
+    67,
+    0.85
+  ); /* Menetapkan latar belakang dengan transparansi */
+  padding: 40px; /* Memberikan padding di dalam form */
+  border-radius: 10px; /* Menambahkan border-radius agar sudutnya melengkung */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2); /* Menambahkan efek bayangan */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Menambahkan border tipis dengan transparansi */
+  width: 300px; /* Menetapkan lebar maksimum form */
+  max-width: 100%; /* Menjaga agar lebar form tidak melebihi 100% dari container */
+}
+
+form {
+  display: flex; /* Menggunakan Flexbox untuk menyusun elemen dalam form */
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+}
+
+h2 {
+  text-align: center; /* Mengatur judul form agar rata tengah */
+  margin-bottom: 20px; /* Memberikan jarak bawah pada judul */
+  color: white; /* Menetapkan warna teks judul menjadi putih */
+}
+
+label {
+  margin-bottom: 5px; /* Memberikan jarak bawah pada label */
+  color: #d1d5db; /* Menetapkan warna label */
+}
+
+input::placeholder {
+  font-style: italic; /* Menetapkan gaya font untuk placeholder menjadi miring */
+  color: #aaa; /* Menetapkan warna placeholder */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  border: 1px solid #ccc; /* Menambahkan border tipis untuk input */
+  height: 35px; /* Menetapkan tinggi input */
+  padding: 0 10px; /* Memberikan padding kiri dan kanan */
+  margin-bottom: 5px; /* Menambahkan jarak bawah antar input */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada input */
+  outline: none; /* Menghapus outline pada input saat difokuskan */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border-color: #42a5f5; /* Mengubah warna border saat input difokuskan */
+  box-shadow: 0 0 8px rgba(66, 165, 245, 0.5); /* Menambahkan efek bayangan biru */
+}
+
+input[type="checkbox"] {
+  margin-right: 10px; /* Memberikan jarak antara checkbox dan label */
+}
+
+.radio-container {
+  margin-top: 5px; /* Memberikan jarak atas pada container radio button */
+  margin-bottom: 45px; /* Memberikan jarak bawah yang lebih besar pada container radio button */
+}
+
+.radio-container label {
+  margin-right: 20px; /* Memberikan jarak kanan antar label radio button */
+  font-size: 15px; /* Menetapkan ukuran font untuk label radio button */
+}
+
+input[type="radio"] {
+  margin-right: 5px; /* Memberikan jarak kanan antar radio button */
+}
+
+.terms-text {
+  color: #00bcd4; /* Menetapkan warna untuk teks "terms" */
+}
+
+button {
+  background-color: #26a69a; /* Menetapkan warna latar belakang tombol */
+  color: white; /* Menetapkan warna teks tombol menjadi putih */
+  border: none; /* Menghapus border pada tombol */
+  padding: 10px; /* Memberikan padding pada tombol */
+  border-radius: 4px; /* Menambahkan sudut melengkung pada tombol */
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat hover */
+  margin-top: 10px; /* Memberikan jarak atas pada tombol */
+}
+
+button:hover {
+  background-color: #1e8e86; /* Mengubah warna tombol saat hover */
+  box-shadow: 0 4px 12px rgba(30, 142, 134, 0.5); /* Menambahkan bayangan saat hover */
+}
+
+.main-container {
+  display: flex; /* Menggunakan Flexbox untuk menyusun form dan tabel */
+  gap: 20px; /* Memberikan jarak antara form dan tabel */
+  align-items: stretch; /* Membuat form dan tabel memiliki tinggi yang sama */
+}
+
+.table-container {
+  overflow-y: auto; /* Menambahkan scrollbar vertikal jika tabel memiliki data lebih dari batas */
+  max-height: 805px; /* Menetapkan tinggi maksimum untuk tabel */
+  background-color: #f9f9f9; /* Menetapkan latar belakang tabel */
+  border: 1px solid #ccc; /* Memberikan border pada tabel */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada tabel */
+  width: 100%; /* Menetapkan lebar tabel menjadi 100% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+}
+
+table {
+  width: 100%; /* Menetapkan lebar tabel menjadi 100% */
+  border-collapse: collapse; /* Menghapus ruang antara border tabel */
+  background-color: #ffffff; /* Menetapkan warna latar belakang tabel */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada tabel */
+  border: 2px solid rgba(0, 0, 0, 0.1); /* Memberikan border tipis pada tabel */
+}
+
+thead {
+  position: sticky; /* Membuat header tabel tetap di atas saat di-scroll */
+  top: 0; /* Menetapkan posisi header di bagian atas */
+  background-color: #102a43; /* Menetapkan latar belakang header */
+  color: white; /* Menetapkan warna teks header menjadi putih */
+  border-radius: 0; /* Menghapus border-radius pada header */
+  margin: 0; /* Menghapus margin pada header */
+  padding: 0; /* Menghapus padding pada header */
+}
+
+th,
+td {
+  text-align: center; /* Menetapkan teks dalam tabel agar rata tengah */
+  padding: 12px 8px; /* Memberikan padding pada sel tabel */
+  border: 1px solid #ddd; /* Memberikan border tipis pada sel tabel */
+  word-wrap: break-word; /* Memungkinkan teks di dalam sel untuk membungkus kata */
+  max-width: 125px; /* Menetapkan lebar maksimal kolom */
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Menetapkan warna latar belakang untuk baris ganjil */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Menetapkan warna latar belakang untuk baris genap */
+}
+
+tbody tr:hover {
+  background-color: #d3d3d3; /* Menetapkan warna latar belakang saat baris di-hover */
+}
+
+tr {
+  line-height: 1.5; /* Menetapkan jarak antar baris */
+  height: 40px; /* Menetapkan tinggi baris */
+}
+
+th {
+  padding: 12px; /* Menetapkan padding pada header tabel */
+  text-transform: uppercase; /* Menetapkan teks header agar kapital semua */
+  text-align: center; /* Menetapkan teks header agar rata tengah */
+  border-right: 1px solid #3b536d; /* Memberikan garis pemisah antar kolom header */
+  border-bottom: 1px solid #254e70; /* Memberikan garis bawah pada header tabel */
+}
+
+th:last-child {
+  border-right: none; /* Menghapus garis kanan pada header terakhir */
+}
+
+td {
+  color: #333; /* Menetapkan warna teks tabel menjadi abu-abu gelap */
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Menetapkan lebar scrollbar */
+  height: 8px; /* Menetapkan tinggi scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2; /* Menetapkan warna track scrollbar */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc; /* Menetapkan warna thumb scrollbar */
+  border-radius: 8px; /* Menambahkan sudut melengkung pada thumb scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3; /* Menetapkan warna thumb saat di-hover */
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 1200px */
+@media (max-width: 1200px) {
+  .main-container {
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyusun elemen di tengah */
+    gap: 20px; /* Memberikan jarak antar elemen */
+  }
+
+  .form-container {
+    width: 100%; /* Membuat form memenuhi lebar layar */
+    max-width: 600px; /* Membatasi lebar maksimal form */
+  }
+
+  .table-container {
+    width: 100%; /* Membuat tabel memenuhi lebar layar */
+    max-width: 1000px; /* Membatasi lebar maksimal tabel */
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+  }
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 835px */
+@media (max-width: 835px) {
+  .form-container {
+    padding: 20px; /* Memberikan padding lebih kecil pada form */
+  }
+
+  .table-container {
+    max-height: 400px; /* Membatasi tinggi tabel */
+  }
+
+  th,
+  td {
+    font-size: 12px; /* Menetapkan ukuran font lebih kecil untuk header dan sel tabel */
+    padding: 8px; /* Memberikan padding lebih kecil */
+  }
+
+  button {
+    font-size: 14px; /* Menetapkan ukuran font tombol lebih kecil */
+    padding: 10px; /* Memberikan padding lebih kecil pada tombol */
+  }
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 725px */
+@media (max-width: 725px) {
+  .main-container {
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyusun elemen di tengah */
+    gap: 20px; /* Memberikan jarak antar elemen */
+  }
+
+  .form-container {
+    width: 100%; /* Membuat form memenuhi lebar layar */
+    max-width: 95%; /* Membatasi lebar maksimal form */
+    padding: 20px; /* Memberikan padding lebih kecil pada form */
+  }
+
+  .table-container {
+    width: 100%; /* Membuat tabel memenuhi lebar layar */
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    max-height: 400px; /* Membatasi tinggi tabel */
+    border-radius: 6px; /* Menambahkan sudut melengkung pada tabel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+  }
+
+  table {
+    font-size: 12px; /* Menetapkan ukuran font untuk tabel */
+  }
+
+  th,
+  td {
+    font-size: 10px; /* Menetapkan ukuran font untuk sel tabel */
+    padding: 6px; /* Memberikan padding lebih kecil */
+    word-wrap: break-word; /* Membungkus kata-kata di dalam sel */
+  }
+
+  button {
+    font-size: 14px; /* Menetapkan ukuran font tombol lebih kecil */
+    padding: 8px; /* Memberikan padding lebih kecil pada tombol */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Menetapkan ukuran font untuk judul lebih kecil */
+  }
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 630px */
+@media (max-width: 630px) {
+  .main-container {
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyusun elemen di tengah */
+    gap: 15px; /* Memberikan jarak antar elemen */
+  }
+
+  .form-container {
+    width: 100%; /* Membuat form memenuhi lebar layar */
+    max-width: 90%; /* Membatasi lebar maksimal form */
+    padding: 20px; /* Memberikan padding lebih kecil pada form */
+    border-radius: 6px; /* Menambahkan sudut melengkung pada form */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada form */
+  }
+
+  .table-container {
+    width: 100%; /* Membuat tabel memenuhi lebar layar */
+    max-width: 95%; /* Membatasi lebar maksimal tabel */
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    max-height: 350px; /* Membatasi tinggi tabel */
+    border-radius: 6px; /* Menambahkan sudut melengkung pada tabel */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+  }
+
+  table {
+    font-size: 11px; /* Menetapkan ukuran font tabel lebih kecil */
+  }
+
+  th,
+  td {
+    font-size: 9px; /* Menetapkan ukuran font sel tabel lebih kecil */
+    padding: 5px; /* Memberikan padding lebih kecil pada sel tabel */
+    text-align: left; /* Menetapkan teks rata kiri pada sel tabel */
+  }
+
+  h2 {
+    font-size: 1rem; /* Menetapkan ukuran font untuk judul lebih kecil */
+    text-align: center; /* Menyusun judul agar rata tengah */
+  }
+
+  button {
+    font-size: 12px; /* Menetapkan ukuran font tombol lebih kecil */
+    padding: 6px; /* Memberikan padding lebih kecil pada tombol */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    height: 30px; /* Menetapkan tinggi input lebih kecil */
+    font-size: 12px; /* Menetapkan ukuran font input lebih kecil */
+  }
+
+  label {
+    font-size: 10px; /* Menetapkan ukuran font label lebih kecil */
+  }
+}
+
+small {
+  color: red; /* Menetapkan warna untuk pesan error menjadi merah */
+  font-size: 12px; /* Menetapkan ukuran font untuk pesan error */
+  margin-bottom: 15px; /* Memberikan jarak bawah pada pesan error */
+  display: block; /* Menampilkan pesan error sebagai elemen blok */
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 576px */
+@media (max-width: 576px) {
+  .form-container {
+    padding: 15px; /* Memberikan padding lebih kecil pada form */
+    width: 90%; /* Membuat form memenuhi 90% dari lebar layar */
+  }
+
+  .table-container {
+    width: 100%; /* Membuat tabel memenuhi lebar layar */
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    border-radius: 4px; /* Menambahkan sudut melengkung pada tabel */
+  }
+
+  th,
+  td {
+    font-size: 10px; /* Menetapkan ukuran font lebih kecil untuk tabel */
+    padding: 6px; /* Memberikan padding lebih kecil pada sel tabel */
+  }
+
+  h2 {
+    font-size: 1.4rem; /* Menetapkan ukuran font judul lebih besar */
+  }
+
+  button {
+    padding: 8px; /* Memberikan padding lebih kecil pada tombol */
+  }
+}
+
+/* Responsif: Menyesuaikan tampilan untuk layar dengan lebar kurang dari 430px */
+@media (max-width: 430px) {
+  .main-container {
+    flex-direction: column; /* Menyusun elemen secara vertikal */
+    align-items: center; /* Menyusun elemen di tengah */
+    gap: 10px; /* Memberikan jarak antar elemen lebih kecil */
+  }
+
+  .form-container {
+    width: 100%; /* Membuat form memenuhi lebar layar */
+    max-width: 90%; /* Membatasi lebar maksimal form */
+    padding: 10px; /* Memberikan padding lebih kecil pada form */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada form */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada form */
+  }
+
+  h2 {
+    font-size: 0.9rem; /* Menetapkan ukuran font judul lebih kecil */
+    text-align: center; /* Menyusun judul agar rata tengah */
+    margin-bottom: 15px; /* Memberikan jarak bawah pada judul */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    height: 25px; /* Menetapkan tinggi input lebih kecil */
+    font-size: 10px; /* Menetapkan ukuran font input lebih kecil */
+    padding: 5px; /* Memberikan padding lebih kecil pada input */
+  }
+
+  label {
+    font-size: 10px; /* Menetapkan ukuran font label lebih kecil */
+  }
+
+  button {
+    font-size: 10px; /* Menetapkan ukuran font tombol lebih kecil */
+    padding: 6px; /* Memberikan padding lebih kecil pada tombol */
+  }
+
+  .table-container {
+    width: 100%; /* Membuat tabel memenuhi lebar layar */
+    max-width: 100%; /* Membatasi lebar maksimal tabel */
+    overflow-x: auto; /* Menambahkan scroll horizontal jika tabel terlalu lebar */
+    max-height: 300px; /* Membatasi tinggi tabel */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada tabel */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+  }
+
+  table {
+    font-size: 9px; /* Menetapkan ukuran font untuk tabel */
+  }
+
+  th,
+  td {
+    font-size: 8px; /* Menetapkan ukuran font untuk sel tabel */
+    padding: 4px; /* Memberikan padding lebih kecil pada sel tabel */
+    text-align: left; /* Menyusun teks rata kiri pada tabel */
+  }
+
+  tbody tr:hover {
+    background-color: #e0e0e0; /* Menambahkan warna latar belakang saat baris di-hover */
+  }
+
+  thead {
+    font-size: 8px; /* Menetapkan ukuran font untuk header tabel */
+  }
+}
