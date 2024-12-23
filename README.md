@@ -23,7 +23,6 @@
 - **Metode Formulir:** Metode POST atau GET digunakan untuk mengirimkan data dari formulir ke server.
 - **Parsing Data:** Parsing data dilakukan dari variabel global POST atau GET dan data tersebut divalidasi di sisi server.
 - **Simpan ke Database:** Data disimpan ke dalam basis data yang juga mencakup informasi tentang jenis browser dan alamat IP pengguna.
-- 
 ![image](https://github.com/user-attachments/assets/bf571fb4-59e7-4e5c-ac57-3666e6226ddc)
 ![image](https://github.com/user-attachments/assets/d800d951-5fd7-4dc2-bc07-dd0da4af00c1)
 
