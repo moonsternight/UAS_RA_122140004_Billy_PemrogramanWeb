@@ -49,6 +49,8 @@
 - **Operasi Database:** Operasi CRUD (Create, Read, Update, Delete) dilakukan pada database untuk mengelola data mahasiswa.
 
 ![image](https://github.com/user-attachments/assets/e56d1bd4-c5b2-4f31-b50c-e0f300667bf0)
+![image](https://github.com/user-attachments/assets/b39824be-4b3e-403d-b67b-19002dc6a2ce)
+
 
 # Bagian 4: Pengelolaan State (Bobot: 20%)
 
